@@ -1,0 +1,82 @@
+/* ===== Chic Portfolio CSS ===== */
+
+:root {
+    --bg-color: #fdfcfa;
+    --accent: #a68a64;
+    --text-dark: #2e2e2e;
+    --text-light: #7a7a7a;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Poppins', sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-sans);
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    line-height: 1.7;
+    scroll-behavior: smooth;
+  }
+  
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    color: var(--text-dark);
+    margin: 0 0 1rem 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--accent);
+    transition: all 0.3s ease;
+  }
+  
+  a:hover {
+    color: var(--text-dark);
+    text-shadow: 0 1px 0 var(--accent);
+  }
+  
+  .section {
+    padding: 80px 10vw;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 2rem;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  }
+  
+  .button {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: var(--font-sans);
+  }
+  
+  .button:hover {
+    background-color: #917351;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .section {
+      padding: 60px 5vw;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  
