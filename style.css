@@ -1,3 +1,4 @@
+/* --- Color Palette & Typography --- */
 :root {
   --ivory: #fdfaf6;
   --charcoal: #2e2e2e;
@@ -9,7 +10,7 @@
   --font-sans: 'Inter', sans-serif;
 }
 
-/* Global Reset */
+/* --- Reset & Global Styles --- */
 body {
   font-family: var(--font-sans);
   background-color: var(--ivory);
@@ -20,13 +21,11 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Headings */
 h1, h2, h3, h4, h5 {
   font-family: var(--font-serif);
   color: var(--charcoal);
   margin-bottom: 0.6rem;
   line-height: 1.3;
-  text-shadow: 0 1px 2px rgba(212, 175, 55, 0.1);
 }
 
 a {
@@ -40,7 +39,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Hero Section */
+/* --- Hero Section --- */
 .hero {
   background-image: url('https://images.pexels.com/photos/7244572/pexels-photo-7244572.jpeg?auto=compress&cs=tinysrgb&w=600');
   background-size: cover;
@@ -59,9 +58,8 @@ a:hover {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom right, rgba(0,0,0,0.4), rgba(44, 40, 40, 0.7));
+  background: rgba(0, 0, 0, 0.4);
   z-index: 1;
-  backdrop-filter: blur(2px);
 }
 
 .hero-content {
@@ -81,16 +79,7 @@ a:hover {
   margin-top: 1rem;
 }
 
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-  .hero p {
-    font-size: 1.2rem;
-  }
-}
-
-/* Sections */
+/* --- Section Styling --- */
 section {
   padding: 4rem 2rem;
 }
@@ -99,32 +88,21 @@ section:nth-child(even) {
   background-color: #f8f4f1;
 }
 
-/* Cards and Project Boxes */
+/* --- Cards and Projects --- */
 .card {
-  background: var(--soft-white);
-  border: 1px solid rgba(233, 205, 233, 0.3);
+  background: white;
+  border: 1px solid #eee;
   border-radius: 1rem;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.card::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-8px) scale(1.01);
-  box-shadow: 0 12px 36px rgba(200, 162, 200, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
 }
 
-/* Timeline */
+/* --- Timeline --- */
 .timeline {
   position: relative;
   margin-left: 2rem;
@@ -147,13 +125,14 @@ section:nth-child(even) {
   border-radius: 50%;
 }
 
-/* Footer */
+/* --- Footer --- */
 footer {
   background: var(--charcoal);
   color: var(--soft-white);
   text-align: center;
   padding: 2rem 1rem;
   font-size: 0.9rem;
+  margin-top: 4rem;
 }
 
 footer a {
@@ -165,26 +144,23 @@ footer a:hover {
   color: var(--gold);
 }
 
-/* Buttons */
+/* --- Buttons --- */
 .button {
-  background: linear-gradient(135deg, var(--dusty-rose), var(--gold));
+  background-color: var(--dusty-rose);
   color: white;
   border: none;
-  padding: 0.8rem 1.8rem;
-  border-radius: 2rem;
-  font-size: 1.05rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  font-size: 1rem;
   cursor: pointer;
-  box-shadow: 0 4px 14px rgba(200, 162, 200, 0.3);
-  transition: all 0.35s ease;
+  transition: background 0.3s ease;
 }
 
 .button:hover {
-  background: linear-gradient(135deg, var(--gold), var(--dusty-rose));
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+  background-color: var(--gold);
 }
 
-/* Micro-Interactions */
+/* --- Micro-Interactions --- */
 .fade-in {
   animation: fadeIn 1.2s ease-in both;
 }
@@ -194,28 +170,77 @@ footer a:hover {
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Testimonial */
-.testimonial {
-  background: var(--soft-white);
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 2px 18px rgba(0,0,0,0.08);
-  transition: all 0.3s ease-in-out;
-}
-
-.testimonial:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 28px rgba(212, 175, 55, 0.15);
-}
-
-/* Vai's Inkwell Styling */
-.inkwell {
-  background: linear-gradient(to right, #fdfaf6, #f3e9f0);
-  font-family: var(--font-serif);
-  padding: 3rem;
+/* --- Blog: Vai's Inkwell --- */
+#inkwell {
+  background-color: #f4edea;
   color: var(--charcoal);
-  border-left: 5px solid var(--dusty-rose);
-  margin: 2rem auto;
-  max-width: 800px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.03);
+  padding: 4rem 2rem;
+  font-family: var(--font-serif);
+}
+
+#inkwell h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.blog-entry {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.blog-entry:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
+}
+
+.blog-entry h3 {
+  margin-top: 0;
+  color: var(--dusty-rose);
+  font-size: 1.6rem;
+}
+
+.blog-entry p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* --- Contact Form Styling --- */
+#contact {
+  background-color: var(--ivory);
+  padding: 4rem 2rem;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color: var(--dusty-rose);
+  color: white;
+  border: none;
+  padding: 0.7rem 2rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: var(--gold);
 }
