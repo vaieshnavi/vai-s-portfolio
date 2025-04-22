@@ -1,53 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vaishnavi Patil | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
-    <script src="https://unpkg.com/framer-motion/dist/framer-motion.umd.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      body {
-        font-family: 'Inter', sans-serif;
-        background-color: #fdfdfb;
-        color: #1f1f1f;
-      }
-      h1, h2, h3 {
-        font-family: 'Playfair Display', serif;
-      }
-      .lux-gold {
-        color: #bfa67a;
-      }
-      .dusty-rose {
-        color: #c8a6a6;
-      }
-    </style>
-  </head>
-  <body class="scroll-smooth">
-    <!-- Sticky Navbar -->
-    <nav class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur z-50 shadow-sm">
-      <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-        <span class="text-xl font-bold lux-gold">Vai</span>
-        <ul class="flex gap-6 text-sm font-medium">
-          <li><a href="#about" class="hover:text-dusty-rose transition">About</a></li>
-          <li><a href="#projects" class="hover:text-dusty-rose transition">Work</a></li>
-          <li><a href="#resume" class="hover:text-dusty-rose transition">Resume</a></li>
-          <li><a href="#testimonials" class="hover:text-dusty-rose transition">Testimonials</a></li>
-          <li><a href="#contact" class="hover:text-dusty-rose transition">Contact</a></li>
-          <li><a href="#inkwell" class="hover:text-dusty-rose transition">Vai's Inkwell</a></li>
-        </ul>
-      </div>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vaishnavi Patil | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/framer-motion/dist/framer-motion.umd.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
+</head>
+<body class="bg-ivory text-charcoal scroll-smooth">
 
-    <!-- Hero Section -->
-    <section class="h-screen flex items-center justify-center text-center px-6" style="background-color: #f8f6f2;">
+  <!-- Hero Section -->
+  <section class="relative h-screen bg-cover bg-center" style="background-image: url('/mnt/data/e4d66258-f656-43f1-a83a-627ac0f83219.png');">
+    <div class="absolute inset-0 bg-black/30"></div>
+
+    <div class="relative z-10 flex items-center justify-center h-full text-center px-6">
       <div>
-        <h1 class="text-5xl md:text-6xl font-bold leading-tight">Vaishnavi Patil</h1>
-        <p class="mt-4 text-lg italic text-gray-600 max-w-xl mx-auto">“Born with a book in one hand and a business idea in the other.”</p>
-        <p class="mt-2 text-sm">But you can call me Vai — everyone cool does.</p>
+        <h1 class="text-5xl md:text-7xl font-serif text-white tracking-tight leading-tight">
+          Vaishnavi Patil
+        </h1>
+        <p class="mt-4 text-xl md:text-2xl font-sans text-white italic">
+          A mind forever building, dreaming, and dancing between strategy & poetry.
+        </p>
       </div>
-    </section>
+    </div>
+  </section>
+
+  <!-- Sticky Navbar Placeholder -->
+  <header class="sticky top-0 z-50 bg-ivory shadow-md">
+    <nav class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="text-xl font-bold tracking-wide">Vai</div>
+      <ul class="hidden md:flex space-x-6 text-sm font-medium">
+        <li><a href="#about" class="hover:text-dusty-rose">About</a></li>
+        <li><a href="#projects" class="hover:text-dusty-rose">Projects</a></li>
+        <li><a href="#experience" class="hover:text-dusty-rose">Experience</a></li>
+        <li><a href="#testimonials" class="hover:text-dusty-rose">Testimonials</a></li>
+        <li><a href="#inkwell" class="hover:text-dusty-rose">vai's Inkwell</a></li>
+        <li><a href="#contact" class="hover:text-dusty-rose">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+</body>
+</html>
+
 
     <!-- About Me -->
     <section id="about" class="py-20 px-6 bg-white">
