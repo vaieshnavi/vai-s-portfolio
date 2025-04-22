@@ -1,73 +1,208 @@
 <!DOCTYPE html>
-<html lang="en"><link rel="stylesheet" href="./style.css"
+<html lang="en">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vaishnavi Patil - Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <title>Vaishnavi Patil Portfolio</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file for styling -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+    header nav ul {
+      list-style: none;
+      padding: 0;
+    }
+    header nav ul li {
+      display: inline;
+      margin: 0 20px;
+    }
+    header nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    header nav ul li a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+    .btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      display: inline-block;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .contact-form input, .contact-form textarea {
+      padding: 10px;
+      margin: 10px 0;
+      width: 80%;
+      max-width: 500px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .contact-form button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
+
+<!-- Navigation Bar -->
+<header>
   <nav>
-    <h1>🌸Vaishnavi Patil🌸</h1>
     <ul>
+      <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
+      <li><a href="#highlights">Highlights</a></li>
+      <li><a href="#vision">Vision</a></li>
+      <li><a href="#hobbies">Hobbies</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
+</header>
 
-  <header class="hero">
-    <h2>Hi, I'm Vai 👋</h2>
-    <p>Business Student | Artist | Budding Diplomat</p>
-  </header>
+<!-- Home Section -->
+<section id="home">
+  <h1>Welcome to the Portfolio of Vaishnavi Patil</h1>
+  <p>An innovator. A storyteller. A creator.</p>
+  <p>Here’s where I craft ideas that transcend the ordinary, where creativity fuses with strategy, and where bold moves are made.</p>
+  <a href="#work" class="btn">View My Work</a>
+  <a href="#contact" class="btn">Contact Me</a>
+</section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m a business student with a passion for international relations, art, and entrepreneurship.</p>
-  </section>
+<!-- About Section -->
+<section id="about">
+  <h1>About Me</h1>
+  <p>👋 Hey, I'm Vaishnavi Patil — but you can call me Vai. A curious concoction of creativity, strategy, and a hint of mischief.</p>
+  <p>Born with a book in one hand and a business idea in the other, I’ve spent years balancing creativity with strategic thinking. From creating impactful business solutions to capturing the attention of audiences with words, I aim to create and inspire wherever I go.</p>
+</section>
 
-  <section id="education">
-    <h2>Education</h2>
-    <ul>
-      <li>IIM Bangalore – Bachelor of Business Management in Digital Business and Management (2024–Present)</li>
-      <li>St.Andrew’s High School, Chinchwad, Pune. – (Graduated 2022)</li>
-    </ul>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Public Speaking</li>
-      <li>Business Strategy</li>
-      <li>Graphic Design</li>
-      <li>Entrepreneurship</li>
-      <li>Languages: English, Hindi, Marathi, German (basic), Japanese (basic)</li>
-    </ul>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Vai’s Veggies:</strong>In Vai's Veggies, I sourced fresh, locally grown vegetables from the wholesale market,
-        optimizing costs to provide high-quality produce at a premium price. This venture sharpened my skills in market research,
-        pricing strategies, and customer relations, all while promoting sustainable and fresh food options.
-
-</li>
-      <li><strong>The Foreign Dispatch:</strong> A faceless content brand focused on diplomacy and global affairs.</li>
-    </ul>
+<!-- Work Section -->
+<section id="work">
+  <h1>My Work</h1>
+  <p>I've worked on several exciting projects where I've leveraged creativity and strategy to deliver impactful results. Some of my key work includes:</p>
   
-  </section>
+  <h3>1. IIM Bangalore Media Strategist & Graphic Design Team</h3>
+  <p>Part of a dynamic team at IIM Bangalore, contributing to media strategies and graphic design, helping enhance the institute’s visibility and brand image.</p>
+  
+  <h3>2. Vai's Veggies — Entrepreneurship Project</h3>
+  <p>Started a side hustle sourcing fresh veggies from wholesale markets and selling them at a premium. Profitable and super fun!</p>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: vaishnavimpatil100@gmail.com</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/patilvaishnavie/">Vaishnavi Patil</a></p>
-  </section>
+  <h3>3. Startup Pitches & Content Creation</h3>
+  <p>Worked on crafting compelling startup pitches, including branding, digital strategies, and creative content for global outreach.</p>
+</section>
 
-  <footer>
-    <p>© 2025 Vaishnavi Patil. All rights reserved.</p>
-  </footer>
+<!-- Education Section -->
+<section id="education">
+  <h1>Education</h1>
+  <h3>Higher Education: Bachelor of Business Management in Digital Business & Entrepreneurship</h3>
+  <p>Currently pursuing my degree at one of India’s top management institutes, where I’m honing my skills in business strategy, digital transformation, and entrepreneurship.</p>
+
+  <h3>School: St. Andrew’s High School</h3>
+  <p>Spent my school years being an active organizer, competition winner, and all-around go-getter.</p>
+
+  <h3>Junior College: Chanakya Junior College</h3>
+  <p>Focused on fine-tuning my academic and entrepreneurial skills, preparing for the future with a solid foundation in business and numbers.</p>
+</section>
+
+<!-- Skills Section -->
+<section id="skills">
+  <h1>Skills</h1>
+  <ul>
+    <li>🧠 **Strategic Thinking** - I love solving complex problems with creative solutions.</li>
+    <li>🎨 **Graphic Design & Branding** - Creating visually impactful content that resonates.</li>
+    <li>📝 **Content Creation & Storytelling** - Turning ideas into words that inspire.</li>
+    <li>📊 **Data Analysis & Excel Wizardry** - Making sense of numbers, trends, and charts.</li>
+    <li>🌐 **Digital Marketing** - Growing audiences and creating a buzz online.</li>
+    <li>🎯 **Leadership & Teamwork** - Motivating teams and driving collaborative success.</li>
+  </ul>
+</section>
+
+<!-- Highlights Section -->
+<section id="highlights">
+  <h1>Highlights</h1>
+  <ul>
+    <li>Worked as the youngest **Media Manager** and **Company Face** at an electrical company.</li>
+    <li>Enrolled in the **United Nations Youth Forum for Sustainability and Development**.</li>
+    <li>Led my football team to **school championships** and captained the team.</li>
+  </ul>
+</section>
+
+<!-- Vision Section -->
+<section id="vision">
+  <h1>My Vision</h1>
+  <p>I'm passionate about creating a positive impact in the world, especially through **digital transformation**, **entrepreneurship**, and **sustainability**. I aim to **give back to society** by using my skills and resources to make a meaningful difference.</p>
+  <p>I envision myself working at the intersection of business, innovation, and social responsibility, advocating for **sustainable development** and playing a role in shaping a better world for future generations.</p>
+</section>
+
+<!-- Hobbies Section -->
+<section id="hobbies">
+  <h1>My Hobbies</h1>
+  <p>When I’m not working on innovative projects, you can find me:</p>
+  <ul>
+    <li>🗺️ **Exploring Historical Facts** - A history buff who loves digging deep into the past.</li>
+    <li>📝 **Journaling & Scrapbooking** - Capturing memories and thoughts in creative ways.</li>
+    <li>⚽ **Athletic Footballer** - School champion and former captain of my football team.</li>
+    <li>💬 **Learning New Languages** - Always up for expanding my linguistic horizons.</li>
+  </ul>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+  <h1>Contact Me</h1>
+  <p>I love building new relationships and exploring opportunities for collaboration. Drop me a message below or connect via email!</p>
+
+  <div class="contact-form">
+    <form action="submit_form.php" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Vaishnavi Patil | All Rights Reserved</p>
+</footer>
+
 </body>
 </html>
