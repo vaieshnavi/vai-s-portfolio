@@ -1,77 +1,152 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vaishnavi Patil | Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-      body {
-        font-family: 'Inter', sans-serif;
-      }
-      h1, h2, h3, .font-serif {
-        font-family: 'Playfair Display', serif;
-      }
-    </style>
-  </head>
-  <body class="bg-ivory text-charcoal">
-    <!-- Sticky Navbar -->
-    <nav class="fixed top-0 w-full bg-white shadow z-50">
-      <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <h1 class="text-xl font-serif font-bold">Vaishnavi Patil</h1>
-        <ul class="flex space-x-6 font-medium">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Work</a></li>
-          <li><a href="#resume">Resume</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#inkwell">Inkwell</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
-    <!-- Hero Section -->
-    <section id="home" class="h-screen flex items-center justify-center bg-dusty-rose text-white text-center p-8">
-      <div>
-        <h2 class="text-4xl md:text-6xl font-serif mb-4">Welcome to the portfolio of Vaishnavi Patil.</h2>
-        <p class="text-lg md:text-xl max-w-2xl mx-auto">
-          An innovator, an entrepreneur, and a relentless thinker — this is where creativity, strategy, and purpose collide.
-        </p>
-        <p class="mt-4 text-base">Let’s make things happen. Explore my work, and let’s connect.</p>
-        <div class="mt-6 space-x-4">
-          <a href="#projects" class="bg-white text-dusty-rose px-6 py-2 rounded-full font-medium">See My Work</a>
-          <a href="#contact" class="border border-white px-6 py-2 rounded-full font-medium">Contact Me</a>
+export default function Portfolio() {
+  const [activeProject, setActiveProject] = useState(null);
+
+  return (
+    <div className="bg-[#f8f6f3] text-[#2b2b2b] font-sans">
+      {/* Sticky Navbar */}
+      <nav className="sticky top-0 z-50 bg-[#f8f6f3] border-b border-gray-200 px-6 py-4 flex justify-between items-center">
+        <h1 className="text-xl font-serif font-bold tracking-wider">Vaishnavi Patil</h1>
+        <div className="space-x-6 text-sm font-medium">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#resume">Resume</a>
+          <a href="#peer testimonials">Peer Testimonials</a>
+          <a href="#vai's inkwell">Vai's Inkwell</a>
+          <a href="#contact">Contact</a>
         </div>
-      </div>
-    </section>
+      </nav>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 px-6 max-w-4xl mx-auto">
-      <h2 class="text-3xl font-serif mb-6">👋 Hey, I'm Vaishnavi Patil</h2>
-      <p class="text-lg">(But you can call me Vai — everyone cool does.)</p>
-      <p class="mt-6 text-base leading-relaxed">
-        Born with a book in one hand and a business idea in the other, I'm a curious concoction of creativity, strategy, and a hint of mischief... 
-        (content continues exactly as you provided)
-      </p>
-    </section>
+      {/* Hero Section */}
+      <section className="min-h-screen flex items-center justify-center text-center px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <h2 className="text-4xl md:text-6xl font-serif mb-4">A mind in motion, a story unfolding.</h2>
+          <p className="text-lg max-w-2xl mx-auto font-light text-gray-600">
+            Welcome to the curated world of Vaishnavi Patel — where purpose meets poise, strategy meets soul.
+          </p>
+        </motion.div>
+      </section>
 
-    <!-- Education, Work, Skills, Highlights, Vision, Hobbies, Contact, Inkwell -->
-    <!-- These sections will follow a similar modular layout using Tailwind's grid and spacing utilities -->
+      {/* About Me */}
+      <section id="about" className="px-6 py-20 max-w-4xl mx-auto">
+        <h3 className="text-3xl font-serif mb-6">About Me</h3>
+        <p className="leading-relaxed text-gray-700 text-lg">
+          👋 Hey, I'm Vaishnavi Patil
+(But you can call me Vai — everyone cool does.)
 
-    <!-- Contact Section -->
-    <section id="contact" class="bg-charcoal text-white py-16 px-6">
-      <div class="max-w-2xl mx-auto text-center">
-        <h2 class="text-3xl font-serif mb-4">Let’s Connect</h2>
-        <p class="mb-6">Ready to connect, collaborate, or just say hi? Let’s talk! Your inbox just found its best friend.</p>
-        <form class="space-y-4">
-          <input type="text" placeholder="Your Name" class="w-full p-3 rounded" required />
-          <input type="email" placeholder="Your Email" class="w-full p-3 rounded" required />
-          <textarea placeholder="Your Message" class="w-full p-3 rounded h-32" required></textarea>
-          <button type="submit" class="bg-gold text-charcoal px-6 py-3 rounded font-medium">Send Message</button>
-        </form>
-      </div>
-    </section>
-  </body>
-</html>
+Born with a book in one hand and a business idea in the other, I'm a curious concoction of creativity, strategy, and a hint of mischief. Currently stirring things up at one of India’s top institutes, diving deep into Digital Business & Entrepreneurship — because world domination doesn’t just happen, it’s designed.
+
+Before this, I spent my formative years somewhere between school corridors and community halls — usually organizing something, winning something, or casually giving impromptu TED Talks to anyone who’d listen. A little later, I found myself deep in the numbers game, developing a strange affection for well-formatted Excel sheets and midnight brainstorms.
+
+I’m big on ideas, bold moves, and making people feel things — whether it’s through a startup pitch, a poetic paragraph from Vai’s Inkwell, or a veggie-selling side hustle that taught me more than any textbook. I’m also the kind of friend who brings color-coded notes to study sessions and knows the perfect jazz playlist when it’s time to vibe and grind.
+
+This isn’t just a portfolio — it’s a peek into a mind that’s constantly building, dreaming, and occasionally romanticizing capitalism (but in a fun way).</p>
+      </section>
+
+      {/* Projects */}
+      <section id="projects" className="bg-[#eceae6] py-20 px-6">
+        <div className="max-w-5xl mx-auto">
+          <h3 className="text-3xl font-serif mb-10">Projects</h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            {["Vai's Veggies", "The Foreign Dispatch", "Media @ IIMB", "Internship (Electrical Sector)", "Teaching Volunteer"].map((title, idx) => (
+              <motion.div
+                key={idx}
+                whileHover={{ scale: 1.02 }}
+                className="bg-white shadow-md rounded-2xl p-6 cursor-pointer"
+                onClick={() => setActiveProject(title)}
+              >
+                <h4 className="text-xl font-semibold mb-2">{title}</h4>
+                <p className="text-sm text-gray-600">Tap to learn more...</p>
+              </motion.div>
+            ))}
+          </div>
+
+          {activeProject && (
+            <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+              <Card className="bg-white w-full max-w-xl mx-auto p-6 rounded-xl">
+                <CardContent>
+                  <h4 className="text-2xl font-serif mb-4">{activeProject}</h4>
+                  <p className="text-gray-700">[Details about {activeProject} go here...]</p>
+                  <Button className="mt-4" onClick={() => setActiveProject(null)}>
+                    Close
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Resume Section */}
+      <section id="resume" className="px-6 py-20 max-w-5xl mx-auto">
+        <h3 className="text-3xl font-serif mb-8">Resume & Experience</h3>
+        <div className="space-y-6 border-l-4 border-gray-400 pl-6">
+          {["St. Andrew's High School", "Chanakya Junior College", "BBA at top Indian B-School", "UN Youth Forum for SDGs", "Football Team Captain", "Media Manager Internship"].map((item, i) => (
+            <div key={i} className="relative">
+              <div className="absolute w-4 h-4 bg-gray-800 rounded-full left-[-30px] top-1.5" />
+              <p className="font-medium text-lg">{item}</p>
+              <p className="text-gray-600 text-sm">[Timeframe and brief highlight]</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section id="testimonials" className="bg-[#f2efea] px-6 py-20">
+        <h3 className="text-3xl font-serif mb-10 text-center">Testimonials</h3>
+        <div className="max-w-3xl mx-auto overflow-x-auto flex space-x-6">
+          {[1, 2, 3].map((n) => (
+            <div key={n} className="min-w-[300px] bg-white rounded-2xl p-6 shadow-sm">
+              <p className="text-gray-700 italic">"Vaishnavi’s presence is magnetic. She leads with heart and delivers with purpose."</p>
+              <p className="mt-4 text-right font-medium">— Colleague #{n}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Inkwell Blog */}
+      <section id="inkwell" className="px-6 py-20 max-w-4xl mx-auto">
+        <h3 className="text-3xl font-serif mb-8">Inkwell</h3>
+        <Tabs defaultValue="poetry" className="w-full">
+          <TabsList>
+            <TabsTrigger value="poetry">Poetry</TabsTrigger>
+            <TabsTrigger value="essays">Essays</TabsTrigger>
+          </TabsList>
+          <TabsContent value="poetry">
+            <p className="text-gray-700">“She writes like she breathes — with depth and delight.” [Poems coming soon]</p>
+          </TabsContent>
+          <TabsContent value="essays">
+            <p className="text-gray-700">Insightful thoughts on identity, ambition, and the art of becoming. [Essays coming soon]</p>
+          </TabsContent>
+        </Tabs>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="bg-[#eceae6] px-6 py-20">
+        <div className="max-w-xl mx-auto text-center">
+          <h3 className="text-3xl font-serif mb-6">Let’s Collaborate</h3>
+          <form className="space-y-4">
+            <input className="w-full p-3 border border-gray-300 rounded-xl" type="text" placeholder="Your Name" required />
+            <input className="w-full p-3 border border-gray-300 rounded-xl" type="email" placeholder="Email Address" required />
+            <textarea className="w-full p-3 border border-gray-300 rounded-xl" rows="5" placeholder="Message" required />
+            <Button type="submit" className="bg-black text-white px-6 py-2 rounded-xl">Send Message</Button>
+          </form>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="text-center text-sm py-10 text-gray-500">
+        © {new Date().getFullYear()} Vaishnavi Patel. Crafted with intention.
+      </footer>
+    </div>
+  );
+}
