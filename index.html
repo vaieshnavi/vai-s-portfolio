@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vaishnavi Patil Portfolio</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file for styling -->
+  <link rel="stylesheet" href="styles.css">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -77,6 +77,75 @@
       border: none;
       border-radius: 5px;
     }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .skills-list li {
+      background: #e4e4e4;
+      padding: 15px 30px;
+      border-radius: 5px;
+      font-size: 18px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .skills-list li:hover {
+      background: #333;
+      color: white;
+    }
+    .highlights-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+    .highlights-list li {
+      font-size: 1.3em;
+      background: #fafafa;
+      padding: 20px;
+      width: 80%;
+      max-width: 500px;
+      text-align: left;
+      border-left: 5px solid #333;
+      transition: background 0.3s ease-in-out;
+    }
+    .highlights-list li:hover {
+      background: #333;
+      color: white;
+    }
+    .vision p {
+      font-size: 1.2em;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .vision h3 {
+      font-size: 1.8em;
+      color: #333;
+    }
+    .hobbies-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+    .hobbies-list li {
+      font-size: 1.3em;
+      list-style: none;
+      background-color: #e4e4e4;
+      padding: 20px 30px;
+      border-radius: 5px;
+      width: 30%;
+      text-align: center;
+      transition: background 0.3s;
+    }
+    .hobbies-list li:hover {
+      background: #333;
+      color: white;
+    }
   </style>
 </head>
 <body>
@@ -102,7 +171,7 @@
 <section id="home">
   <h1>Welcome to the Portfolio of Vaishnavi Patil</h1>
   <p>An innovator. A storyteller. A creator.</p>
-  <p>Here’s where I craft ideas that transcend the ordinary, where creativity fuses with strategy, and where bold moves are made.</p>
+  <p>Where creativity merges with strategic thinking. Crafting innovative solutions, telling impactful stories, and inspiring positive change.</p>
   <a href="#work" class="btn">View My Work</a>
   <a href="#contact" class="btn">Contact Me</a>
 </section>
@@ -110,99 +179,86 @@
 <!-- About Section -->
 <section id="about">
   <h1>About Me</h1>
-  <p>👋 Hey, I'm Vaishnavi Patil — but you can call me Vai. A curious concoction of creativity, strategy, and a hint of mischief.</p>
-  <p>Born with a book in one hand and a business idea in the other, I’ve spent years balancing creativity with strategic thinking. From creating impactful business solutions to capturing the attention of audiences with words, I aim to create and inspire wherever I go.</p>
+  <p>👋 I’m Vaishnavi Patil, a creative strategist, digital innovator, and aspiring changemaker. I bring ideas to life, combining art with strategy to create impactful solutions and narratives that inspire.</p>
+  <p>My journey has led me to explore business innovation, digital marketing, and entrepreneurship with a focus on sustainability and growth.</p>
 </section>
 
 <!-- Work Section -->
 <section id="work">
   <h1>My Work</h1>
-  <p>I've worked on several exciting projects where I've leveraged creativity and strategy to deliver impactful results. Some of my key work includes:</p>
+  <p>I’ve worked across multiple domains, transforming ideas into projects and results:</p>
   
   <h3>1. IIM Bangalore Media Strategist & Graphic Design Team</h3>
-  <p>Part of a dynamic team at IIM Bangalore, contributing to media strategies and graphic design, helping enhance the institute’s visibility and brand image.</p>
+  <p>Collaborated with a team of talented individuals, shaping media strategies and curating impactful visual content that elevated the institute’s brand.</p>
   
   <h3>2. Vai's Veggies — Entrepreneurship Project</h3>
-  <p>Started a side hustle sourcing fresh veggies from wholesale markets and selling them at a premium. Profitable and super fun!</p>
+  <p>Launched a vegetable sourcing business, leveraging cost-effective strategies for sourcing fresh produce, scaling the operation with substantial profitability.</p>
 
-  <h3>3. Startup Pitches & Content Creation</h3>
-  <p>Worked on crafting compelling startup pitches, including branding, digital strategies, and creative content for global outreach.</p>
+  <h3>3. Startup Pitching & Content Creation</h3>
+  <p>Worked with several startups to craft compelling pitches and strategies for growth, incorporating branding, digital content, and market expansion.</p>
 </section>
 
 <!-- Education Section -->
 <section id="education">
   <h1>Education</h1>
-  <h3>Higher Education: Bachelor of Business Management in Digital Business & Entrepreneurship</h3>
-  <p>Currently pursuing my degree at one of India’s top management institutes, where I’m honing my skills in business strategy, digital transformation, and entrepreneurship.</p>
+  <h3>Bachelor of Business Management</h3>
+  <p>Pursuing a degree with a focus on Digital Business, Entrepreneurship, and International Relations.</p>
 
-  <h3>School: St. Andrew’s High School</h3>
-  <p>Spent my school years being an active organizer, competition winner, and all-around go-getter.</p>
+  <h3>St. Andrew's High School</h3>
+  <p>Graduated with a focus on leadership, academic excellence, and extracurricular contributions.</p>
 
-  <h3>Junior College: Chanakya Junior College</h3>
-  <p>Focused on fine-tuning my academic and entrepreneurial skills, preparing for the future with a solid foundation in business and numbers.</p>
+  <h3>Chanakya Junior College</h3>
+  <p>Specialized in business management and entrepreneurship to prepare for future ventures in the corporate world.</p>
 </section>
 
 <!-- Skills Section -->
 <section id="skills">
-  <h1>Skills</h1>
-  <ul>
-    <li>🧠 **Strategic Thinking** - I love solving complex problems with creative solutions.</li>
-    <li>🎨 **Graphic Design & Branding** - Creating visually impactful content that resonates.</li>
-    <li>📝 **Content Creation & Storytelling** - Turning ideas into words that inspire.</li>
-    <li>📊 **Data Analysis & Excel Wizardry** - Making sense of numbers, trends, and charts.</li>
-    <li>🌐 **Digital Marketing** - Growing audiences and creating a buzz online.</li>
-    <li>🎯 **Leadership & Teamwork** - Motivating teams and driving collaborative success.</li>
-  </ul>
+  <h1>My Skills</h1>
+  <div class="skills-list">
+    <li>🎯 Strategic Thinking & Problem Solving</li>
+    <li>🎨 Graphic Design & Visual Storytelling</li>
+    <li>📊 Data Analysis & Digital Strategy</li>
+    <li>✍ Content Creation & Storytelling</li>
+    <li>🌐 Social Media Marketing & Branding</li>
+    <li>🧑‍💻 Leadership & Project Management</li>
+  </div>
 </section>
 
 <!-- Highlights Section -->
 <section id="highlights">
   <h1>Highlights</h1>
-  <ul>
-    <li>Worked as the youngest **Media Manager** and **Company Face** at an electrical company.</li>
-    <li>Enrolled in the **United Nations Youth Forum for Sustainability and Development**.</li>
-    <li>Led my football team to **school championships** and captained the team.</li>
+  <ul class="highlights-list">
+    <li>Youngest **Media Manager & Company Face** at an electrical company.</li>
+    <li>Joined the **United Nations Youth Forum for Sustainability and Development** to contribute to global change.</li>
+    <li>**Football Team Captain** and champion at school level.</li>
   </ul>
 </section>
 
 <!-- Vision Section -->
-<section id="vision">
+<section id="vision" class="vision">
   <h1>My Vision</h1>
-  <p>I'm passionate about creating a positive impact in the world, especially through **digital transformation**, **entrepreneurship**, and **sustainability**. I aim to **give back to society** by using my skills and resources to make a meaningful difference.</p>
-  <p>I envision myself working at the intersection of business, innovation, and social responsibility, advocating for **sustainable development** and playing a role in shaping a better world for future generations.</p>
+  <h3>Creating a Future That Counts</h3>
+  <p>I believe in the power of **sustainability**, **innovation**, and **collaboration**. My aim is to build a career that fuses my passions with a drive to create meaningful global impact. By embracing **entrepreneurship**, **digital transformation**, and **social responsibility**, I am committed to shaping a future that reflects a world we all can thrive in.</p>
+  <p>In the long term, I envision contributing to global initiatives, working with international organizations, and using my voice and platform to advocate for positive change and inclusive growth.</p>
 </section>
 
 <!-- Hobbies Section -->
 <section id="hobbies">
-  <h1>My Hobbies</h1>
-  <p>When I’m not working on innovative projects, you can find me:</p>
-  <ul>
-    <li>🗺️ **Exploring Historical Facts** - A history buff who loves digging deep into the past.</li>
-    <li>📝 **Journaling & Scrapbooking** - Capturing memories and thoughts in creative ways.</li>
-    <li>⚽ **Athletic Footballer** - School champion and former captain of my football team.</li>
-    <li>💬 **Learning New Languages** - Always up for expanding my linguistic horizons.</li>
-  </ul>
+  <h1>Hobbies</h1>
+  <div class="hobbies-list">
+    <li>🗺️ Exploring Historical Facts</li>
+    <li>✍ Journaling & Scrapbooking</li>
+    <li>⚽ Athletic Footballer (School Champion & Captain)</li>
+    <li>🌍 Learning New Languages</li>
+  </div>
 </section>
 
 <!-- Contact Section -->
 <section id="contact">
   <h1>Contact Me</h1>
-  <p>I love building new relationships and exploring opportunities for collaboration. Drop me a message below or connect via email!</p>
+  <p>Have an idea, collaboration, or opportunity? Reach out to me!</p>
 
   <div class="contact-form">
     <form action="submit_form.php" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer>
-  <p>&copy; 2025 Vaishnavi Patil | All Rights Reserved</p>
-</footer>
-
-</body>
-</html>
+     
