@@ -5,23 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vaishnavi Patil | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/framer-motion/dist/framer-motion.umd.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Playfair Display', serif;
-    }
+    body { font-family: 'Inter', sans-serif; }
+    h1,h2,h3,h4,h5,h6 { font-family: 'Playfair Display', serif; }
   </style>
 </head>
 <body class="bg-ivory text-charcoal scroll-smooth">
 
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 bg-ivory shadow-md">
+    <nav class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="text-xl font-bold tracking-wide">Vai</div>
+      <ul class="hidden md:flex space-x-6 text-sm font-medium">
+        <li><a href="index.html" class="hover:text-dusty-rose">Home</a></li>
+        <li><a href="about.html" class="hover:text-dusty-rose">About</a></li>
+        <li><a href="education.html" class="hover:text-dusty-rose">Education</a></li>
+        <li><a href="extras.html" class="hover:text-dusty-rose">Extras</a></li>
+        <li><a href="contact.html" class="hover:text-dusty-rose">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <!-- Hero Section -->
   <section class="relative h-screen bg-cover bg-center" style="background-image: url('https://i.pinimg.com/736x/61/bd/06/61bd063ab469c8234e0510991582a335.jpg');">
     <div class="absolute inset-0 bg-black/30"></div>
-
     <div class="relative z-10 flex items-center justify-center h-full text-center px-6">
       <div>
         <h1 class="text-5xl md:text-7xl font-serif text-white tracking-tight leading-tight">
@@ -30,142 +38,17 @@
         <p class="mt-4 text-xl md:text-2xl font-sans text-white italic">
           A mind forever building, dreaming, and dancing between strategy & poetry.
         </p>
+        <div class="mt-8 space-x-4">
+          <a href="about.html" class="px-6 py-3 bg-dusty-rose text-white rounded-xl hover:bg-rose-600 transition">About Me</a>
+          <a href="extras.html" class="px-6 py-3 border-2 border-dusty-rose text-dusty-rose rounded-xl hover:bg-dusty-rose hover:text-white transition">Explore Work</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Sticky Navbar Placeholder -->
-  <header class="sticky top-0 z-50 bg-ivory shadow-md">
-    <nav class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-      <div class="text-xl font-bold tracking-wide">Vai</div>
-      <ul class="hidden md:flex space-x-6 text-sm font-medium">
-        <li><a href="#about" class="hover:text-dusty-rose">About</a></li>
-        <li><a href="#projects" class="hover:text-dusty-rose">Projects</a></li>
-        <li><a href="#experience" class="hover:text-dusty-rose">Experience</a></li>
-        <li><a href="#testimonials" class="hover:text-dusty-rose">Testimonials</a></li>
-        <li><a href="#inkwell" class="hover:text-dusty-rose">vai's Inkwell</a></li>
-        <li><a href="#contact" class="hover:text-dusty-rose">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <footer class="py-6 text-center text-gray-500">
+    2025 Vaishnavi Patil. All rights reserved.
+  </footer>
 
 </body>
 </html>
-
-
-    <!-- About Me -->
-    <section id="about" class="py-20 px-6 bg-white">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="text-4xl font-bold mb-6">About Me</h2>
-        <p class="text-lg leading-relaxed">
-          Currently stirring things up at <span class="font-semibold">IIM Bangalore</span>, studying Digital Business & Entrepreneurship. I’m a curious concoction of creativity, strategy, and a hint of mischief. 
-          From winning competitions and organizing community events, to crafting content and branding strategy — I do a bit of everything. And I do it with flair.
-        </p>
-        <p class="mt-6 text-base text-gray-700">
-          I’m big on ideas, bold moves, and making people feel things — whether it’s through a startup pitch, a poetic paragraph from Vai’s Inkwell, or a veggie-selling side hustle that taught me more than any textbook.
-        </p>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 px-6 bg-gray-50">
-      <div class="max-w-6xl mx-auto">
-        <h2 class="text-4xl font-bold mb-10">Work & Projects</h2>
-        <div class="grid md:grid-cols-2 gap-8">
-          <!-- Project card template -->
-          <div class="p-6 bg-white shadow rounded-2xl hover:shadow-xl transition duration-300 cursor-pointer">
-            <h3 class="text-2xl font-semibold">Vai's Veggies</h3>
-            <p class="text-sm mt-2 text-gray-600">From sourcing to pricing, a crash course in entrepreneurship through veggies.</p>
-          </div>
-
-          <div class="p-6 bg-white shadow rounded-2xl hover:shadow-xl transition duration-300 cursor-pointer">
-            <h3 class="text-2xl font-semibold">The Foreign Dispatch</h3>
-            <p class="text-sm mt-2 text-gray-600">Deep-dive analysis, diplomacy, and creativity in one sharp package.</p>
-          </div>
-
-          <div class="p-6 bg-white shadow rounded-2xl hover:shadow-xl transition duration-300 cursor-pointer">
-            <h3 class="text-2xl font-semibold">IIMB Media Team</h3>
-            <p class="text-sm mt-2 text-gray-600">Shaping visual identity & strategy for IIMB’s top initiatives.</p>
-          </div>
-
-          <div class="p-6 bg-white shadow rounded-2xl hover:shadow-xl transition duration-300 cursor-pointer">
-            <h3 class="text-2xl font-semibold">Internship as Youngest Media Manager</h3>
-            <p class="text-sm mt-2 text-gray-600">Telling brand stories at a leadership level — early on.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Resume / Experience Section -->
-    <section id="resume" class="py-20 px-6 bg-white">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="text-4xl font-bold mb-10">Resume & Timeline</h2>
-        <div class="border-l-2 border-dusty-rose pl-6">
-          <div class="mb-10">
-            <h3 class="text-xl font-semibold">Indian Institute of Management Bangalore</h3>
-            <p class="text-sm text-gray-500">2024–2027 | Bachelor of Business Management</p>
-            <p class="mt-2 text-gray-700">Specializing in Digital Business & Entrepreneurship.</p>
-          </div>
-          <div class="mb-10">
-            <h3 class="text-xl font-semibold">Chanakya Junior College</h3>
-            <p class="text-sm text-gray-500">2022–2024</p>
-            <p class="mt-2 text-gray-700">Where analytical met creative.</p>
-          </div>
-          <div>
-            <h3 class="text-xl font-semibold">St. Andrew’s High School</h3>
-            <p class="text-sm text-gray-500">2009–2022</p>
-            <p class="mt-2 text-gray-700">Foundations in leadership and curiosity.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20 px-6 bg-gray-100">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-4xl font-bold mb-8">Testimonials</h2>
-        <div class="overflow-hidden">
-          <div class="animate-slide flex space-x-10">
-            <div class="min-w-full text-center px-6">
-              <p class="text-lg italic">"Vaishnavi brings a blend of intellect and imagination that’s rare to find. She doesn’t just work — she creates impact."</p>
-              <p class="mt-4 font-semibold">— Peer at IIMB</p>
-            </div>
-            <div class="min-w-full text-center px-6">
-              <p class="text-lg italic">"One of the youngest, boldest media minds I’ve had the pleasure to work with."</p>
-              <p class="mt-4 font-semibold">— Internship Mentor</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  <!-- Vai's Inkwell Section -->
-    <section id="inkwell" class="py-20 px-6 bg-gray-50">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="text-4xl font-bold mb-8">Vai’s Inkwell</h2>
-        <p class="text-lg italic">“Where thoughts brew and musings flow.”</p>
-        <div class="mt-8 space-y-6">
-          <div class="p-6 bg-white shadow rounded-2xl">
-            <h3 class="text-2xl font-semibold mb-2">On Romanticizing Capitalism</h3>
-            <p class="text-gray-600">A poetic paradox on ambition, hustle, and finding meaning in the madness.</p>
-          </div>
-          <div class="p-6 bg-white shadow rounded-2xl">
-            <h3 class="text-2xl font-semibold mb-2">Midnight Brainstorms & Morning Brews</h3>
-            <p class="text-gray-600">An ode to those quiet moments where magic begins — over coffee and chaos.</p>
-          </div>
-        </div>
-
-
-
-
-
-
-        
-   <footer>
-  <p>2025 Vaishnavi Patil. All rights reserved.</p>
-  <div class="socials">
-    <a href="https://www.linkedin.com/in/patilvaishnavie/">LinkedIn</a> | <a href="#">Email</a>
-  </div>
-</footer>
-
-  
