@@ -1,12 +1,12 @@
-/* --- Color Palette & Typography (REVAMPED) --- */
+/* --- Color Palette & Typography (DARK & GRADIENT REVAMP) --- */
 :root {
   /* High-Contrast Modern Palette */
-  --color-dark: #1F2937;        /* New Charcoal: Dark, Deep Gray */
-  --color-light: #F9FAFB;       /* New Ivory: Very Light, Clean Background */
-  --color-primary-vibrant: #FF6B6B; /* Attention-Grabbing: Vibrant Red/Coral */
+  --color-dark: #1F2937;            /* Base Dark Color */
+  --color-secondary-dark: #2C3E50;  /* Subtle Dark for contrast */
+  --color-light: #ECF0F1;           /* Near-White for main text */
+  --color-primary-vibrant: #FF6B6B; /* Vibrant Red/Coral for Pop */
   --color-secondary-cool: #4ECDC4;  /* Modern Accent: Cool Teal */
-  --color-text-subtle: #6B7280;     /* For paragraphs and subtle text */
-  --color-shadow: rgba(0, 0, 0, 0.15); /* Stronger, defined shadows */
+  --color-shadow: rgba(0, 0, 0, 0.4); /* Stronger shadows for depth on dark background */
 
   /* Retaining Your Fonts for Sophistication */
   --font-serif: 'Playfair Display', serif;
@@ -15,50 +15,71 @@
 
 /* --- Reset & Global Styles (UPDATED) --- */
 * {
-    box-sizing: border-box; /* Crucial for modern layouts */
+    box-sizing: border-box; 
 }
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--color-light); /* Brighter background */
-  color: var(--color-dark);
+  /* Apply a subtle dark gradient to the entire body background */
+  background: linear-gradient(180deg, var(--color-dark) 0%, var(--color-secondary-dark) 100%);
+  color: var(--color-light); /* Light text on dark background */
   margin: 0;
   padding: 0;
-  line-height: 1.7; /* Slightly more space for readability */
+  line-height: 1.7; 
   scroll-behavior: smooth;
+  min-height: 100vh; /* Ensure the gradient covers the full view */
 }
 
 h1, h2, h3, h4, h5 {
   font-family: var(--font-serif);
-  color: var(--color-dark);
+  color: var(--color-light); /* Default to white for main headings */
   margin-bottom: 0.8rem;
   line-height: 1.2;
 }
 
-/* Use the vibrant color for strong emphasis */
-h1 { font-size: 3.5rem; color: var(--color-primary-vibrant); font-weight: 900; }
-h2 { font-size: 2.5rem; border-bottom: 3px solid var(--color-secondary-cool); display: inline-block; padding-bottom: 5px; }
+/* Use the VIBRANT color for strong emphasis on main titles */
+h1 { 
+    font-size: 3.5rem; 
+    color: var(--color-primary-vibrant); 
+    font-weight: 900; 
+}
+
+/* Applying a gradient to H2 for a striking effect */
+h2 { 
+    font-size: 2.5rem; 
+    /* Gradient Text Effect */
+    background: linear-gradient(90deg, var(--color-secondary-cool), var(--color-primary-vibrant));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    
+    border-bottom: none; /* Removed line, using gradient text instead */
+    display: inline-block; 
+    padding-bottom: 5px; 
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+}
 
 
 a {
-  color: var(--color-primary-vibrant); /* Vibrant link color */
+  color: var(--color-secondary-cool); /* Teal link color */
   text-decoration: none;
   transition: all 0.3s ease-in-out;
-  font-weight: 600; /* Bolder links stand out */
+  font-weight: 600;
 }
 
 a:hover {
-  color: var(--color-dark); /* Strong contrast on hover */
+  color: var(--color-primary-vibrant); /* Strong contrast on hover */
   text-decoration: underline;
 }
 
-/* --- Hero Section (BOLD & CONTRASTING) --- */
+/* --- Hero Section (MOODY) --- */
 .hero {
   /* Using your existing background image */
   background-image: url('https://images.pexels.com/photos/7244572/pexels-photo-7244572.jpeg?auto=compress&cs=tinysrgb&w=600');
   background-size: cover;
   background-position: center;
-  height: 90vh; /* Reduced to leave space for a navigation if you have one */
+  height: 90vh;
   position: relative;
   color: white;
   display: flex;
@@ -66,16 +87,15 @@ a:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* Add padding for internal spacing on smaller screens */
   padding: 0 20px; 
 }
 
 .hero::before {
-  /* Darker overlay for better text contrast */
+  /* Darker overlay for extreme contrast */
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(31, 41, 55, 0.65); /* Use your new dark color with higher opacity */
+  background: rgba(0, 0, 0, 0.8); /* Almost black overlay */
   z-index: 1;
 }
 
@@ -89,70 +109,50 @@ a:hover {
 }
 
 .hero h1 {
-  font-size: 4.5rem; /* Larger font size for impact */
-  color: white;
-  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Strong shadow for depth */
+  font-size: 4.5rem; 
+  color: white; /* H1 in hero must be white to read against dark overlay */
+  text-shadow: 0 4px 10px rgba(255, 107, 107, 0.8); /* Glow effect using primary color */
 }
 
 .hero p {
   font-size: 1.6rem;
-  font-style: normal; /* Less formal, more direct */
+  font-style: normal;
   color: var(--color-secondary-cool); /* Use the teal color to highlight the subtitle */
   margin-top: 1.5rem;
   font-weight: 500;
 }
 
-/* --- Buttons (MAXIMUM IMPACT) --- */
-.button {
-  background-color: var(--color-primary-vibrant); /* Vibrant main color */
-  color: white;
-  border: none;
-  padding: 0.8rem 2rem;
-  border-radius: 5px; /* Less rounded, more modern shape */
-  font-size: 1.1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  cursor: pointer;
-  /* Stronger shadow for "pop" effect */
-  box-shadow: 0 6px 12px var(--color-shadow); 
-  transition: all 0.3s ease;
-}
-
-.button:hover {
-  background-color: #e65555; /* Slightly darker on hover */
-  transform: translateY(-3px); /* Lifts up dramatically */
-  box-shadow: 0 10px 20px var(--color-shadow);
-}
-
-/* --- Section Styling (CLEAN) --- */
+/* --- Section Styling (CONTRAST) --- */
 section {
-  padding: 6rem 2rem; /* More vertical space */
+  padding: 6rem 2rem; 
+  background-color: var(--color-secondary-dark); /* Darker section background */
 }
 
 section:nth-child(even) {
-  background-color: var(--color-light); /* Use the light variable for clean look */
+  background-color: var(--color-dark); /* Alternating dark shades */
 }
 
-/* --- Cards and Projects (HIGH VISUAL DEPTH) --- */
+/* --- Cards and Projects (GLOWING POP) --- */
 .card {
-  background: white;
-  border: none; /* Removing thin border for clean look */
-  border-radius: 12px; /* Slightly more rounded */
-  box-shadow: 0 10px 20px var(--color-shadow); /* Much stronger initial shadow */
+  background: var(--color-secondary-dark); /* Card background is slightly lighter than the section */
+  border: 1px solid rgba(78, 205, 196, 0.3); /* Teal border for separation */
+  border-radius: 12px;
+  /* Glowing shadow effect */
+  box-shadow: 0 0 15px rgba(78, 205, 196, 0.2); 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-7px); /* Lifts more noticeably */
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25); /* Even stronger shadow on hover */
+  transform: translateY(-7px);
+  /* Stronger glow on hover */
+  box-shadow: 0 0 25px var(--color-secondary-cool), 0 10px 20px var(--color-shadow);
 }
 
-/* --- Timeline (VIBRANT ACCENTS) --- */
+/* --- Timeline (THICKER & GLOWING) --- */
 .timeline {
   position: relative;
   margin-left: 2rem;
-  border-left: 3px solid var(--color-secondary-cool); /* Use cool teal for the line */
+  border-left: 4px solid var(--color-secondary-cool); /* Thicker line */
 }
 
 .timeline-event {
@@ -163,13 +163,15 @@ section:nth-child(even) {
 .timeline-event::before {
   content: '';
   position: absolute;
-  left: -13px; /* Adjusted to fit new border width */
+  left: -16px;
   top: 1.4rem;
-  background: var(--color-primary-vibrant); /* Use vibrant red for event dots */
-  width: 15px; /* Larger dots */
-  height: 15px;
+  background: var(--color-primary-vibrant);
+  width: 20px; /* Much larger dots */
+  height: 20px;
   border-radius: 50%;
-  border: 3px solid var(--color-light); /* A ring of light background for contrast */
+  border: 4px solid var(--color-dark); 
+  /* Subtle glow */
+  box-shadow: 0 0 8px var(--color-primary-vibrant); 
 }
 
 /* --- Footer (STRONG CONTRAST) --- */
@@ -191,6 +193,30 @@ footer a:hover {
   color: var(--color-primary-vibrant);
 }
 
+/* --- Buttons (GRADIENT POWER) --- */
+.button {
+  /* Background Gradient */
+  background: linear-gradient(45deg, var(--color-primary-vibrant), #FF4757);
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 50px; /* Fully rounded for attention */
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  /* Shadow with a subtle primary color tint */
+  box-shadow: 0 8px 15px rgba(255, 107, 107, 0.4); 
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: linear-gradient(45deg, #FF4757, var(--color-primary-vibrant)); /* Shift gradient direction */
+  transform: translateY(-3px) scale(1.05); /* Lifts up and expands slightly */
+  box-shadow: 0 12px 20px rgba(255, 107, 107, 0.6);
+}
+
 /* --- Micro-Interactions (KEPT) --- */
 .fade-in {
   animation: fadeIn 1.2s ease-in both;
@@ -203,8 +229,8 @@ footer a:hover {
 
 /* --- Blog: Vai's Inkwell (CLEAN AND VIBRANT) --- */
 #inkwell {
-  background-color: var(--color-light); /* Consistent light background */
-  color: var(--color-dark);
+  background-color: var(--color-secondary-dark); 
+  color: var(--color-light);
   padding: 6rem 2rem;
   font-family: var(--font-serif);
 }
@@ -213,21 +239,21 @@ footer a:hover {
   font-size: 3rem;
   margin-bottom: 3rem;
   text-align: center;
-  color: var(--color-primary-vibrant);
+  /* H2 gradient effect will apply here */
 }
 
 .blog-entry {
-  background: white;
-  padding: 2.5rem; /* More padding inside */
+  background: var(--color-dark); /* Blog entries are the darkest color */
+  padding: 2.5rem; 
   border-radius: 8px; 
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Medium shadow */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4); 
   margin-bottom: 2.5rem;
   transition: all 0.3s ease;
 }
 
 .blog-entry:hover {
-  box-shadow: 0 12px 24px rgba(0,0,0,0.15); 
-  transform: translateY(-8px); /* More dramatic lift */
+  box-shadow: 0 12px 24px rgba(0,0,0,0.6); 
+  transform: translateY(-8px); 
 }
 
 .blog-entry h3 {
@@ -238,12 +264,12 @@ footer a:hover {
 
 .blog-entry p {
   font-size: 1rem;
-  color: var(--color-text-subtle); /* Softer paragraph text */
+  color: var(--color-light); 
 }
 
 /* --- Contact Form Styling (SHARP AND MODERN) --- */
 #contact {
-  background-color: var(--color-light);
+  background-color: var(--color-dark);
   padding: 6rem 2rem;
 }
 
@@ -251,9 +277,9 @@ footer a:hover {
   max-width: 600px;
   margin: auto;
   padding: 30px;
-  background: white;
+  background: var(--color-secondary-dark); /* Form stands out by being a slightly lighter dark shade */
   border-radius: 12px;
-  box-shadow: 0 10px 20px var(--color-shadow);
+  box-shadow: 0 10px 30px var(--color-shadow);
 }
 
 .contact-form input,
@@ -261,7 +287,9 @@ footer a:hover {
   width: 100%;
   padding: 1rem;
   margin-bottom: 1.5rem;
-  border: 1px solid #ddd; /* Lighter border */
+  background-color: var(--color-dark); /* Dark input fields */
+  color: var(--color-light);
+  border: 1px solid var(--color-dark);
   border-radius: 5px;
   font-family: var(--font-sans);
   font-size: 1rem;
@@ -270,11 +298,12 @@ footer a:hover {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: var(--color-primary-vibrant); /* Focus state uses primary color */
+    border-color: var(--color-secondary-cool);
     outline: none;
+    box-shadow: 0 0 5px var(--color-secondary-cool); 
 }
 
 .contact-form button {
   /* Inherits the main .button styles */
-  width: 100%; /* Make the button full width for a strong call to action */
+  width: 100%; 
 }
