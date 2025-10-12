@@ -1,50 +1,64 @@
-/* --- Color Palette & Typography --- */
+/* --- Color Palette & Typography (REVAMPED) --- */
 :root {
-  --ivory: #fdfaf6;
-  --charcoal: #2e2e2e;
-  --dusty-rose: #c8a2c8;
-  --gold: #d4af37;
-  --soft-white: #fffdf9;
-  --accent: #e3b7c9;
+  /* High-Contrast Modern Palette */
+  --color-dark: #1F2937;        /* New Charcoal: Dark, Deep Gray */
+  --color-light: #F9FAFB;       /* New Ivory: Very Light, Clean Background */
+  --color-primary-vibrant: #FF6B6B; /* Attention-Grabbing: Vibrant Red/Coral */
+  --color-secondary-cool: #4ECDC4;  /* Modern Accent: Cool Teal */
+  --color-text-subtle: #6B7280;     /* For paragraphs and subtle text */
+  --color-shadow: rgba(0, 0, 0, 0.15); /* Stronger, defined shadows */
+
+  /* Retaining Your Fonts for Sophistication */
   --font-serif: 'Playfair Display', serif;
   --font-sans: 'Inter', sans-serif;
 }
 
-/* --- Reset & Global Styles --- */
+/* --- Reset & Global Styles (UPDATED) --- */
+* {
+    box-sizing: border-box; /* Crucial for modern layouts */
+}
+
 body {
   font-family: var(--font-sans);
-  background-color: var(--ivory);
-  color: var(--charcoal);
+  background-color: var(--color-light); /* Brighter background */
+  color: var(--color-dark);
   margin: 0;
   padding: 0;
-  line-height: 1.6;
+  line-height: 1.7; /* Slightly more space for readability */
   scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5 {
   font-family: var(--font-serif);
-  color: var(--charcoal);
-  margin-bottom: 0.6rem;
-  line-height: 1.3;
+  color: var(--color-dark);
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
 }
 
+/* Use the vibrant color for strong emphasis */
+h1 { font-size: 3.5rem; color: var(--color-primary-vibrant); font-weight: 900; }
+h2 { font-size: 2.5rem; border-bottom: 3px solid var(--color-secondary-cool); display: inline-block; padding-bottom: 5px; }
+
+
 a {
-  color: var(--dusty-rose);
+  color: var(--color-primary-vibrant); /* Vibrant link color */
   text-decoration: none;
   transition: all 0.3s ease-in-out;
+  font-weight: 600; /* Bolder links stand out */
 }
 
 a:hover {
-  color: var(--gold);
+  color: var(--color-dark); /* Strong contrast on hover */
   text-decoration: underline;
 }
 
-/* --- Hero Section --- */
+/* --- Hero Section (BOLD & CONTRASTING) --- */
 .hero {
+  /* Using your existing background image */
   background-image: url('https://images.pexels.com/photos/7244572/pexels-photo-7244572.jpeg?auto=compress&cs=tinysrgb&w=600');
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 90vh; /* Reduced to leave space for a navigation if you have one */
   position: relative;
   color: white;
   display: flex;
@@ -52,61 +66,93 @@ a:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
+  /* Add padding for internal spacing on smaller screens */
+  padding: 0 20px; 
 }
 
 .hero::before {
+  /* Darker overlay for better text contrast */
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(31, 41, 55, 0.65); /* Use your new dark color with higher opacity */
   z-index: 1;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
+  /* Add a subtle background to the content block for extra pop */
+  padding: 20px 40px;
+  background: rgba(255, 255, 255, 0.1); 
+  border-radius: 10px;
 }
 
 .hero h1 {
-  font-size: 3.5rem;
+  font-size: 4.5rem; /* Larger font size for impact */
   color: white;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Strong shadow for depth */
 }
 
 .hero p {
-  font-size: 1.5rem;
-  font-style: italic;
-  color: var(--soft-white);
-  margin-top: 1rem;
+  font-size: 1.6rem;
+  font-style: normal; /* Less formal, more direct */
+  color: var(--color-secondary-cool); /* Use the teal color to highlight the subtitle */
+  margin-top: 1.5rem;
+  font-weight: 500;
 }
 
-/* --- Section Styling --- */
+/* --- Buttons (MAXIMUM IMPACT) --- */
+.button {
+  background-color: var(--color-primary-vibrant); /* Vibrant main color */
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 5px; /* Less rounded, more modern shape */
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  /* Stronger shadow for "pop" effect */
+  box-shadow: 0 6px 12px var(--color-shadow); 
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #e65555; /* Slightly darker on hover */
+  transform: translateY(-3px); /* Lifts up dramatically */
+  box-shadow: 0 10px 20px var(--color-shadow);
+}
+
+/* --- Section Styling (CLEAN) --- */
 section {
-  padding: 4rem 2rem;
+  padding: 6rem 2rem; /* More vertical space */
 }
 
 section:nth-child(even) {
-  background-color: #f8f4f1;
+  background-color: var(--color-light); /* Use the light variable for clean look */
 }
 
-/* --- Cards and Projects --- */
+/* --- Cards and Projects (HIGH VISUAL DEPTH) --- */
 .card {
   background: white;
-  border: 1px solid #eee;
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border: none; /* Removing thin border for clean look */
+  border-radius: 12px; /* Slightly more rounded */
+  box-shadow: 0 10px 20px var(--color-shadow); /* Much stronger initial shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  transform: translateY(-7px); /* Lifts more noticeably */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25); /* Even stronger shadow on hover */
 }
 
-/* --- Timeline --- */
+/* --- Timeline (VIBRANT ACCENTS) --- */
 .timeline {
   position: relative;
   margin-left: 2rem;
-  border-left: 2px solid var(--dusty-rose);
+  border-left: 3px solid var(--color-secondary-cool); /* Use cool teal for the line */
 }
 
 .timeline-event {
@@ -117,50 +163,35 @@ section:nth-child(even) {
 .timeline-event::before {
   content: '';
   position: absolute;
-  left: -10px;
-  top: 1.2rem;
-  background: var(--gold);
-  width: 12px;
-  height: 12px;
+  left: -13px; /* Adjusted to fit new border width */
+  top: 1.4rem;
+  background: var(--color-primary-vibrant); /* Use vibrant red for event dots */
+  width: 15px; /* Larger dots */
+  height: 15px;
   border-radius: 50%;
+  border: 3px solid var(--color-light); /* A ring of light background for contrast */
 }
 
-/* --- Footer --- */
+/* --- Footer (STRONG CONTRAST) --- */
 footer {
-  background: var(--charcoal);
-  color: var(--soft-white);
+  background: var(--color-dark);
+  color: var(--color-light);
   text-align: center;
-  padding: 2rem 1rem;
-  font-size: 0.9rem;
-  margin-top: 4rem;
+  padding: 3rem 1rem; /* More padding */
+  font-size: 1rem;
+  margin-top: 6rem;
 }
 
 footer a {
-  color: var(--dusty-rose);
-  margin: 0 0.5rem;
+  color: var(--color-secondary-cool); /* Teal accent links */
+  margin: 0 0.8rem;
 }
 
 footer a:hover {
-  color: var(--gold);
+  color: var(--color-primary-vibrant);
 }
 
-/* --- Buttons --- */
-.button {
-  background-color: var(--dusty-rose);
-  color: white;
-  border: none;
-  padding: 0.7rem 1.5rem;
-  border-radius: 30px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.button:hover {
-  background-color: var(--gold);
-}
-
-/* --- Micro-Interactions --- */
+/* --- Micro-Interactions (KEPT) --- */
 .fade-in {
   animation: fadeIn 1.2s ease-in both;
 }
@@ -170,77 +201,80 @@ footer a:hover {
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* --- Blog: Vai's Inkwell --- */
+/* --- Blog: Vai's Inkwell (CLEAN AND VIBRANT) --- */
 #inkwell {
-  background-color: #f4edea;
-  color: var(--charcoal);
-  padding: 4rem 2rem;
+  background-color: var(--color-light); /* Consistent light background */
+  color: var(--color-dark);
+  padding: 6rem 2rem;
   font-family: var(--font-serif);
 }
 
 #inkwell h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+  font-size: 3rem;
+  margin-bottom: 3rem;
   text-align: center;
+  color: var(--color-primary-vibrant);
 }
 
 .blog-entry {
   background: white;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
-  margin-bottom: 2rem;
+  padding: 2.5rem; /* More padding inside */
+  border-radius: 8px; 
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Medium shadow */
+  margin-bottom: 2.5rem;
   transition: all 0.3s ease;
 }
 
 .blog-entry:hover {
-  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15); 
+  transform: translateY(-8px); /* More dramatic lift */
 }
 
 .blog-entry h3 {
   margin-top: 0;
-  color: var(--dusty-rose);
-  font-size: 1.6rem;
+  color: var(--color-secondary-cool); /* Use teal for blog titles */
+  font-size: 1.8rem;
 }
 
 .blog-entry p {
-  font-size: 1.1rem;
-  color: #444;
+  font-size: 1rem;
+  color: var(--color-text-subtle); /* Softer paragraph text */
 }
 
-/* --- Contact Form Styling --- */
+/* --- Contact Form Styling (SHARP AND MODERN) --- */
 #contact {
-  background-color: var(--ivory);
-  padding: 4rem 2rem;
+  background-color: var(--color-light);
+  padding: 6rem 2rem;
 }
 
 .contact-form {
   max-width: 600px;
   margin: auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px var(--color-shadow);
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
   padding: 1rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ddd; /* Lighter border */
+  border-radius: 5px;
   font-family: var(--font-sans);
   font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--color-primary-vibrant); /* Focus state uses primary color */
+    outline: none;
 }
 
 .contact-form button {
-  background-color: var(--dusty-rose);
-  color: white;
-  border: none;
-  padding: 0.7rem 2rem;
-  font-size: 1rem;
-  border-radius: 30px;
-  cursor: pointer;
-}
-
-.contact-form button:hover {
-  background-color: var(--gold);
+  /* Inherits the main .button styles */
+  width: 100%; /* Make the button full width for a strong call to action */
 }
